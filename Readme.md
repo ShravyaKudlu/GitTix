@@ -11,5 +11,4 @@ step2: Auth signup architecture -> error checks and connection to mongo DB(Kuber
 The output
 ![alt img](./imgs/step2:auth-signup-mongoDB-output.png)
 
-This is the changes done to signIn page and get the JWT_KEY in kubernetes clustor by adding that as an env variable in my yaml file.
-![alt img](./imgs/SignInPage.png)
+
