@@ -11,4 +11,5 @@ step2: Auth signup architecture -> error checks and connection to mongo DB(Kuber
 The output
 ![alt img](./imgs/step2:auth-signup-mongoDB-output.png)
 
-
+Output of all other route to complete my architecture...
+![alt img](./imgs/AllOtherRoutes.png)

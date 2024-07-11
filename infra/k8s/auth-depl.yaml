@@ -11,8 +11,8 @@ spec:
     metadata:
       labels:
         app: auth
-    specs:
-      container:
+    spec:
+      containers:
         - name: auth
           image: shravyakudlu/auth
           env:
