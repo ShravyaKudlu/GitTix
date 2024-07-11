@@ -10,3 +10,10 @@ step2: Auth signup architecture -> error checks and connection to mongo DB(Kuber
 ![alt img](./imgs/step2:auth-signup-mongoDB.png)
 The output
 ![alt img](./imgs/step2:auth-signup-mongoDB-output.png)
+
+Implementation of adding cookies and JWT
+(Challenges)
+![alt img](./imgs/Cookies-JWTOptions.png)
+
+Output
+![alt img](./imgs/cookies-jwtf-output.png)
