@@ -9,5 +9,6 @@ Implemented Kubernetes namespaces to fetch the ingress namespace dynamically. In
 Pictures:
 ![alt img](./imgs/resolution.png)
 
-This is my output:
+This is my output
+
 ![alt img](./imgs/react-nextJS.gif)
