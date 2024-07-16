@@ -11,11 +11,13 @@ spec:
     metadata:
       labels:
         app: auth
-    specs:
-      container:
+    spec:
+      containers:
         - name: auth
           image: shravyakudlu/auth
           env:
+            - name: MONGO_URI
+              value: "mongodb://auth-mongo-srv:27017/auth"
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:

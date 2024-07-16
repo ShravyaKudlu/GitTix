@@ -1,15 +1,15 @@
-This is my Auth Service architecture
+What is the Ticket Service?
+The Ticket Service informs the user about the various tickets available to them after they log in. Users can add new tickets and modify existing ones as needed.
 
-![alt_img](./imgs/autharchitecture.png)
+How did you scale and prepare?
+From the Auth Service, I extracted several components like middleware and custom errors and published them as a public repository on NPMJS. This allows me to reuse these components in other services.
+![alt img](./imgs/publish.png)
 
-Step1: Output(GET: current/users/currentuser)
-![alt img](./imgs/step1:authserver1.png)
-![alt img](./imgs/step1:authserver2.png)
+Here are some outputs related to my architecture, including different route handlers and the associated models.
+![alt img](./imgs/tickets.png)
 
-step2: Auth signup architecture -> error checks and connection to mongo DB(Kubernetes Pod)
-![alt img](./imgs/step2:auth-signup-mongoDB.png)
-The output
-![alt img](./imgs/step2:auth-signup-mongoDB-output.png)
+How did you approach the creation of the service?
+I followed a test-first approach. I used Jest to write tests for various route handlers, implemented the handlers, and ensured the tests passed. Finally, I integrated it with ingress for testing directly in Postman.
 
-This is the changes done to signIn page and get the JWT_KEY in kubernetes clustor by adding that as an env variable in my yaml file.
-![alt img](./imgs/SignInPage.png)
+Output:
+![alt img](./imgs/outputtickets.png)

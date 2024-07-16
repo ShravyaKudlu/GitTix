@@ -5,10 +5,9 @@ import {
   validationResult,
 } from "express-validator";
 import { User } from "../models/users";
-import { BadRequestError } from "../errors/bad-request-error";
+import { BadRequestError, validateRequest } from "@skgtick/common";
 import jwt from "jsonwebtoken";
 const router = express.Router();
-import { validateRequest } from "../middleware/validate-request";
 
 router.post(
   "/api/users/signup",
