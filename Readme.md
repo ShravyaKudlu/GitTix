@@ -10,3 +10,6 @@ Here are some outputs related to my architecture, including different route hand
 
 How did you approach the creation of the service?
 I followed a test-first approach. I used Jest to write tests for various route handlers, implemented the handlers, and ensured the tests passed. Finally, I integrated it with ingress for testing directly in Postman.
+
+Output:
+![alt img](./imgs/outputtickets.png)
