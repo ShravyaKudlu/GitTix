@@ -1,14 +1,12 @@
-What?
-Setting up Next.js with React to enhance my authentication service's user interaction.
+What is the Ticket Service?
+The Ticket Service informs the user about the various tickets available to them after they log in. Users can add new tickets and modify existing ones as needed.
 
-Challenge:
-Ensuring Next.js correctly interacts with an ingress-nginx setup, switching between server-side rendering (SSR) and its built-in route handler, especially when using the getInitialProps function.
+How did you scale and prepare?
+From the Auth Service, I extracted several components like middleware and custom errors and published them as a public repository on NPMJS. This allows me to reuse these components in other services.
+![alt img](./imgs/publish.png)
 
-Resolution:
-Implemented Kubernetes namespaces to fetch the ingress namespace dynamically. Integrated this logic into the header component, enabling Next.js to seamlessly determine the routing strategy based on the environment. SSR improves performance and SEO by pre-rendering pages on the server, ensuring faster initial load times and enabling search engines to index content effectively, crucial for enhancing user experience and discoverability in my application.
-Pictures:
-![alt img](./imgs/resolution.png)
+Here are some outputs related to my architecture, including different route handlers and the associated models.
+![alt img](./imgs/tickets.png)
 
-This is my output
-
-![alt img](./imgs/react-nextJS.gif)
+How did you approach the creation of the service?
+I followed a test-first approach. I used Jest to write tests for various route handlers, implemented the handlers, and ensured the tests passed. Finally, I integrated it with ingress for testing directly in Postman.
