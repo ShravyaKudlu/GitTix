@@ -10,6 +10,7 @@ output:
 
 What measures did you take for event handling?
 To handle events, I implemented a natsWrapper class, which is a singleton event handler. Building on the changes I made in the previous branch for implementing NATS Streaming, I created publishers for orders when the order status is created and when it is canceled. This ensures that other services, such as the Ticket Service, are aware when an order is created and thus cannot change the price of the reserved order. Similarly, they will know when the order is canceled, allowing price changes again.
+![alt img](./imgs/orderevents.png)
 ![alt img](./imgs/After_publishing_events.png)
 
 How did you approach the creation of the service?
