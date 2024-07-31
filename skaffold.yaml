@@ -32,6 +32,14 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+    - image: shravyakudlu/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
     - image: shravyakudlu/client
       context: client
       docker:
