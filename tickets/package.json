@@ -18,7 +18,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@skgtick/common": "^1.0.21",
+    "@skgtick/common": "^1.0.23",
     "@types/cookie-session": "^2.0.49",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.6",
