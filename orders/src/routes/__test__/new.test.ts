@@ -16,6 +16,7 @@ it("Allows authenticated users to create an order", async () => {
 
 it("requires an error if the ticket is already reserved", async () => {
   const ticket = Ticket.build({
+    id: new mongoose.Types.ObjectId().toHexString(),
     title: "concert",
     price: 20,
   });
@@ -38,6 +39,7 @@ it("requires an error if the ticket is already reserved", async () => {
 it("reserves a ticket", async () => {
   // Create a new ticket
   const ticket = Ticket.build({
+    id: new mongoose.Types.ObjectId().toHexString(),
     title: "concert1",
     price: 200,
   });
@@ -55,6 +57,7 @@ it("reserves a ticket", async () => {
 it("emits an order created event", async () => {
   // Create a new ticket
   const ticket = Ticket.build({
+    id: new mongoose.Types.ObjectId().toHexString(),
     title: "concert1",
     price: 200,
   });

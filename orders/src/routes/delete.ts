@@ -5,7 +5,7 @@ import {
   requireAuth,
 } from "@skgtick/common";
 import { Order, OrderStatus } from "../models/order";
-import { OrderCancelledPublisher } from "../events/publisher/order-cancelled-publisher";
+import { OrderCancelledPublisher } from "../events/publishers/order-cancelled-publisher";
 import { natsWrapper } from "../nats-wrapper";
 
 const router = express.Router();
@@ -30,6 +30,7 @@ router.delete(
       ticket: {
         id: order.ticket.id,
       },
+      version: order.version,
     });
 
     res.status(204).send(order);

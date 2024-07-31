@@ -11,11 +11,11 @@ import { body } from "express-validator";
 import { Ticket } from "../models/ticket";
 import { Order } from "../models/order";
 import { natsWrapper } from "../nats-wrapper";
-import { OrderCreatedPublisher } from "../events/publisher/order-created-publisher";
+import { OrderCreatedPublisher } from "../events/publishers/order-created-publisher";
 
 const router = express.Router();
 
-const EXPIRATION_WINDOW_SECONDS = 15 * 60;
+const EXPIRATION_WINDOW_SECONDS = 1 * 60;
 
 router.post(
   "/api/orders",
@@ -66,6 +66,7 @@ router.post(
         id: ticket.id,
         price: ticket.price,
       },
+      version: order.version,
     });
 
     res.status(201).send(order);
